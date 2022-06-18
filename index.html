@@ -394,13 +394,20 @@
           </ul>
         </div>
         <!-- SUBSCRIBE -->
+
+        <!-- <p class="subscribe-text"></p> -->
+
         <div class="form-field">
-          <p class="subscribe-text">Подпишитесь на рассылку</p>
+          <p class="subscribe-title">Подпишитесь на рассылку</p>
           <form class="subscribe">
-            <label class="subscribe-form">
-              <input class="imput-email" type="text" placeholder="E-mail" />
-              <button class="subscribe-btn" type="submit">Подписаться</button></label
-            >
+            <label class="subscribe-form"></label>
+            <input class="imput-email" type="email" name="email" placeholder="E-mail" required />
+            <button class="subscribe-btn button" type="submit">
+              Подписаться
+              <svg class="icon-send" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -408,13 +415,73 @@
 
     <!-- MODAL -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="icon-modal-close" width="18" height="18">
             <use href="./images/sprite.svg#icon-close-modal"></use>
           </svg>
         </button>
+        <p class="modal-title title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="modal-form">
+          <div class="modal-field">
+            <label for="name" class="label-text">Имя</label>
+            <div class="label-icon">
+              <input class="modal-imput" type="text" name="user-name" id="name" required />
+              <svg class="user-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="tel" class="label-text">Телефон</label>
+            <div class="label-icon">
+              <input class="modal-imput" type="tel" name="user-tel" id="tel" required />
+              <svg class="user-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="email" class="label-text">Почта</label>
+
+            <div class="label-icon">
+              <input class="modal-imput" type="email" name="user-mail" id="email" required />
+              <svg class="user-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="label-text"
+              >Комментарий
+              <textarea
+                class="comment-imput"
+                name="user-comment"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
+          </div>
+          <div class="agreement">
+            <input
+              class="accept visually-hidden"
+              type="checkbox"
+              name="agreement"
+              id="accept"
+              value="true"
+            />
+            <span class="icon-position">
+              <svg class="accept-icon" width="16" height="15">
+                <use href="./images/sprite.svg#icon-accept"></use>
+              </svg>
+            </span>
+            <label for="accept" class="accept-text">
+              <span class="accept-text">Соглашаюсь с рассылкой и принимаю</span>
+              <a class="contract-link link" href="">Условия договора</a>
+            </label>
+          </div>
+          <button class="send-btn button" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
