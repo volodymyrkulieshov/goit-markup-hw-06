@@ -852,7 +852,7 @@ button {
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--timing-duration) var(--timing-function);
   width: 528px;
-  height: auto;
+  height: 581px;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -926,6 +926,11 @@ button {
   left: 12px;
   top: 12px;
   transition: fill var(--timing-duration) var(--timing-function);
+}
+
+.user-icon:hover,
+.user-icon:focus {
+  fill: var(--brand-accent);
 }
 
 .modal-imput:focus,
