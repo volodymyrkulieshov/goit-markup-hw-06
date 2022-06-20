@@ -622,7 +622,7 @@ button {
 /* ------------SUBSCRIBE----------------------------- */
 
 .form-field {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .subscribe-title {
@@ -875,6 +875,7 @@ button {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  transition: fill var(--timing-duration) var(--timing-function);
 }
 .modal-btn:hover {
   fill: var(--brand-accent);
@@ -890,10 +891,10 @@ button {
   margin-bottom: 12px;
 }
 /* .modal-form {
-  display: flex;
-  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 } */
-.modal-field {
+.form-field {
   width: 100%;
   /* padding-left: 40px;
   padding-right: 40px; */
@@ -902,6 +903,7 @@ button {
 
 .label-text {
   /* position: relative; */
+
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -914,6 +916,7 @@ button {
   width: 100%;
   height: 40px;
   padding-left: 42px;
+  font-size: 14px;
   color: var(--basic-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -928,19 +931,34 @@ button {
   transition: fill var(--timing-duration) var(--timing-function);
 }
 
-.user-icon:hover,
-.user-icon:focus {
+.user-icon:focus-within,
+.user-icon:hover {
   fill: var(--brand-accent);
 }
 
-.modal-imput:focus,
+/* .user-icon:focus-within + .modal-imput,
+.user-icon:hover + .modal-imput {
+  border-color: var(--brand-accent);
+} */
+
+.modal-imput:focus-within,
 .modal-imput:hover {
   border-color: var(--brand-accent);
 }
 
-.modal-imput:focus + .user-icon,
+.modal-imput:focus-within + .user-icon,
 .modal-imput:hover + .user-icon {
   fill: var(--brand-accent);
+}
+
+.comment-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--basic-color);
 }
 
 .comment-imput {
@@ -948,6 +966,7 @@ button {
   height: 120px;
   font-size: 14px;
   padding: 12px 16px;
+  margin-top: 4px;
   color: var(--basic-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -968,23 +987,27 @@ button {
 }
 
 .agreement {
-  position: relative;
-
   margin-bottom: 30px;
 }
 
-.accept-text {
+.accept-checkbox {
+  position: relative;
+  /* display: block;
+  text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
+}
+
+.accept-text {
   margin-left: 7px;
-  margin-right: 2px;
 }
 
 .icon-position {
   position: absolute;
-  top: 2px;
-  left: 10px;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1032,6 +1055,7 @@ button {
 } */
 
 .contract-link {
+  margin-left: 5px;
   color: var(--brand-accent);
   text-decoration: underline;
   transition: color var(--timing-duration) var(--timing-function);
@@ -1049,6 +1073,7 @@ button {
   margin: auto;
   width: 200px;
   height: 50px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 16px;
