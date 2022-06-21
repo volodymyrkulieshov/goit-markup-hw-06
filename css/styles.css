@@ -621,7 +621,7 @@ button {
 }
 /* ------------SUBSCRIBE----------------------------- */
 
-.form-field {
+.subscribe {
   margin-left: auto;
 }
 
@@ -633,10 +633,9 @@ button {
   margin-bottom: 20px;
 }
 
-.subscribe {
+.subscribe-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 /* .subscribe-form {
@@ -962,6 +961,7 @@ button {
 }
 
 .comment-imput {
+  display: block;
   width: 100%;
   height: 120px;
   font-size: 14px;
