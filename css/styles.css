@@ -902,7 +902,7 @@ button {
 
 .label-text {
   /* position: relative; */
-
+  display: block;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -951,8 +951,7 @@ button {
 }
 
 .comment-text {
-  display: flex;
-  flex-direction: column;
+  display: block;
   margin-bottom: 20px;
   font-size: 12px;
   line-height: 1.16;
@@ -992,9 +991,9 @@ button {
 
 .accept-checkbox {
   position: relative;
-  /* display: block;
-  text-align: center; */
   display: flex;
+  text-align: center;
+  display: block;
   justify-content: center;
   align-items: center;
   margin-left: 10px;
@@ -1071,6 +1070,7 @@ button {
   justify-content: center;
   align-items: center;
   margin: auto;
+
   width: 200px;
   height: 50px;
   padding: 0;
